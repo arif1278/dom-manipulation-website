@@ -5,11 +5,11 @@ function showPlayer() {
     const showPlayName = document.getElementById('selection');
     showPlayName.innerText = '';
     for (let i = 0; i < playerNameList.length; i++) {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `<th>${i + 1}.</th>
-        <th>${playerNameList[i]}</th>`;
+        const tr = document.createElement("li");
+        li.innerHTML = `<ol>${i + 1}.</ol>
+        <ol>${playerNameList[i]}</ol>`;
         if (i < 5) {
-            showPlayName.appendChild(tr);
+            showPlayName.appendChild(li);
         }
         else {
             alert("Sorry!! You can not add more than 5 players");

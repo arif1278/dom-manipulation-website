@@ -37,11 +37,11 @@
         <!-- Card section Start -->
         <section class=" mt-8 w-9/12 mx-auto bg-slate-600">
             <div class="grid grid-cols-3 gap-4  ">
-                <div id="selection" class="col-span-2 grid grid-cols-3 gap-4  ">
+                <div class="col-span-2 grid grid-cols-3 gap-4  ">
                     <div class=" border-1 ">
                         <img class="w-64 h-52" src="images/tamim 2.jpg">
                         <div>
-                            <h3 id="player-name" class="text-center">Tamim Iqbal</h3>
+                            <h3 class="text-center">Tamim Iqbal</h3>
                         </div>
                         <div class="flex text-xs ml-5">
                             <p>match:378</p>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="text-center mt-1">
 
-                            <button id="player-select"
+                            <button id="player-cost-btn"
                                 class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
                         </div>
                     </div>
@@ -228,43 +228,43 @@
                 <div class="mr-16">
                     <div>
                         <h2>Selected - Five</h2>
-                        <ol>
-                            <li class="li-s">1</li>
-                            <li class="li-s">2</li>
-                            <li class="li-s">3</li>
-                            <li class="li-s">4</li>
-                            <li class="li-s">5</li>
+                        <ol id="player">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
                         </ol>
                     </div>
                     <div>
                         <h2 class="text-center">Budget</h2>
                         <form class="flex mt-3">
                             <label for="#">Per Player:</label>
-                            <input class="w-2/4" type="text" id="" name="" value="">
+                            <input id="per-player-expensive-js" class="w-2/4" type="number">
                         </form>
-                        <button class="bg-blue-500 w-full mt-3">Calculate</button>
+                        <button class="bg-blue-500 w-full mt-3" id="calculate-player-expensive-js">Calculate</button>
 
                         <div class="flex mt-3">
                             <div>
                                 <h5>Player Expenses:</h5>
                             </div>
                             <div class="ml-4">
-                                <h5>$5000</h5>
+                                <h5>$<span id="total-player-expensive-js">00</span></h5>
                             </div>
                         </div>
                         <form class="flex mt-3 ">
                             <label for="#">Manager:</label>
-                            <input class="w-4/6 ml-7" type="text" id="" name="" value="">
+                            <input id="manager-expensive-js" class="w-4/6 ml-7" type="number">
                         </form>
                         <form class="flex mt-3">
                             <label for="#">Coach:</label>
-                            <input class="w-3/6 ml-10" type="text" id="" name="" value="">
+                            <input id="coach-expensive-js" class="w-3/6 ml-10" type="number">
                         </form>
-                        <button class="bg-blue-500 w-full mt-3">Calculate Total</button>
+                        <button class="bg-blue-500 w-full mt-3" id="calculate-total-js">Calculate Total</button>
 
                         <div class="flex mt-5">
                             <h5>Total:</h5>
-                            <h5 class="ml-20"><span class="text-red-600">$00</span></h5>
+                            <h5 class="ml-20"><span id="total-expensive-js" class="text-red-600">$00</span></h5>
                         </div>
                         <div>
 
