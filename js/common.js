@@ -22,3 +22,17 @@ playerExpensiveCalculate.addEventListener("click", function () {
     }
 })
 
+const calculateTotal = document.getElementById("calculate-total-js")
+calculateTotal.addEventListener('click', function () {
+    const totalPlayerExpenses = document.getElementById("total-player-expensive-js").innerText;
+    const managerCost = inputValueById('manager-expensive-js')
+    const coachCost = inputValueById('coach-expensive-js')
+    const totalPlayerCost = parseFloat(totalPlayerExpenses);
+    if ((managerCost >= 0) && (coachCost >= 0)) {
+        const totalCost = totalPlayerCost + managerCost + coachCost;
+        document.getElementById("total-expensive-js").innerText = totalCost;
+    }
+    else {
+        alert("Please Fill Input Field !!!  Note:Input Field Can't Contain With Negative Number or 00")
+    }
+})
