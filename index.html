@@ -5,281 +5,311 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assaingment Of Five</title>
+    <!-- fabicon -->
+    <link rel="shortcut icon" href="images/bangladesh-cricket-team.png" type="image/x-icon">
+    <!-- title -->
+    <title>Pick Best 5 PSG Players</title>
+    <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom-css -->
+    <style>
+        body {
+            font-family: Tahoma;
+        }
+
+        .cus_head {
+            font-family: cursive;
+        }
+    </style>
+
 </head>
 
-<body>
-    <main class="bg-yellow-100">
+<body class="bg-zinc-900 text-white">
+    <!-- header-banner -->
+    <header class="bg-black flex justify-between items-end h-[85vh]">
 
-        <!-- Header section start -->
-        <header class="h-96">
-            <div class=" bg-slate-900 flex w-100% mt-6 mb-5 h-96">
-                <div class="w-1/5 opacity-70 ">
-                    <img class="h-full" src="images/afif 2.jpg">
+        <div>
+            <img class="h-[120px] w-[110px] ml-20 md:ml-20 mb-24 md:mb-62 lg:mb-0 animate-spin" src="images/bol.jfif"
+                alt="">
+            <img class="lg:mb-[-1px] md:mb-[-19px] mb-[-8px] h-auto animate-pulse" src="images/Saifuddin.jfif" alt="">
+        </div>
+
+        <div class="w-5/12 my-auto">
+
+            <h1 class="text-5xl cus_head text-orange-500 text-center">Pick Best 5 Bangladeshi Players</h1>
+
+            <p class="text-center">Bangladesh became an associate member of the
+                ICC in 1977,[18] and competed in six ICC Trophies,
+                the leading ODI competition for non-Test playing nations.</p>
+        </div>
+
+        <div class="pt-10">
+            <img class="mr-16 mb-24 md:mb-44 lg:mb-0 animate-bounce" src="images/Bangladesh.jpg" alt="">
+            <img class="lg:ml-40 md:ml-16" src="images/bat boll.png" alt="">
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="lg:flex lg:justify-between lg:p-20 p-10 gap-14">
+        <!-- cards -->
+        <section class="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- player-1 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/tamim 2.jpg" alt="">
                 </div>
-                <div class="w-3/5 text-center text-white mt-20">
-                    <h1 class="text-5xl"><span class="text-orange-500">Select Your Best Five</span></h1>
-                    <p class="text-sm mt-6">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                        Velit
-                    </p>
-                    <p class="text-sm">officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
-                    </p>
-                    <p class="text-sm"> nostrud amet.</p>
-                </div>
-                <div class="w-1/5 opacity-70">
-                    <img class="h-full" src="images/team 2.jpg">
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name1" class="text-2xl font-semibold">Tamim Iqbal</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 378</p>
+                        <span>.</span>
+                        <p>Run 14914</p>
+                    </div>
+                    <!-- player-1-btn -->
+                    <button onclick="addCart('name1', this)" type="button"
+                        class="rounded uppercase py-2 mb-5 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
+                    <!-- alter-btn-by-id -->
+                    <!-- <button onclick="addCart('name1', 'test-id-disable')" id="test-id-disable" type="button"
+                        class="rounded uppercase py-2 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700">Select</button> -->
                 </div>
             </div>
-        </header>
-        <!-- Header section End -->
-
-        <!-- Card section Start -->
-        <section class=" mt-8 w-9/12 mx-auto bg-slate-600">
-            <div class="grid grid-cols-3 gap-4  ">
-                <div id="player-cost-btn" class="col-span-2 grid grid-cols-3 gap-4  ">
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/tamim 2.jpg">
-                        <div>
-                            <h3 class="text-center">Tamim Iqba</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Liton Das.jpg">
-                        <div>
-                            <h3 class="text-center">Liton Das</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Anamul Haq.jfif">
-                        <div>
-                            <h3 class="text-center">Anamul Hauq</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/shakib Al Hasan.jpg">
-                        <div>
-                            <h3 class="text-center">Shakib Al Hasan</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Mushfiqur Rahim.jpg">
-                        <div>
-                            <h3 class="text-center">Mushfiqur Rahim</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Mahmudullah.jpg">
-                        <div>
-                            <h3 class="text-center">Mahmudullah</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Afif Hossain.jpg">
-                        <div>
-                            <h3 class="text-center">Afif Hossain</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Mosaddek Hossain.jfif">
-                        <div>
-                            <h3 class="text-center">Mosaddek Hossain</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Mahadi Hasan Miraj.jfif">
-                        <div>
-                            <h3 class="text-center">Mahadi Hasan Miraj</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Saifuddin.jfif">
-                        <div>
-                            <h3 class="text-center">Saifuddin</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Taskin.jfif">
-                        <div>
-                            <h3 class="text-center">Taskin</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-
-                    <div class=" border-1 ">
-                        <img class="w-64 h-52" src="images/Taijul Islam.jfif">
-                        <div>
-                            <h3 class="text-center">Taijul Islam</h3>
-                        </div>
-                        <div class="flex text-xs ml-5">
-                            <p>match:378</p>
-                            <p class="ml-1">run:14914</p>
-                        </div>
-                        <div class="text-center mt-1">
-
-                            <button
-                                class="bg-amber-600 hover:bg-sky-700  px-8 py-1 text-white font-medium ">Select</button>
-                        </div>
-                    </div>
-
-
-
-
+            <!-- player-2 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/Liton Das.jpg" alt="">
                 </div>
-                <!-- Section JS Field start-->
-                <div class="mr-16">
-                    <div>
-                        <h2>Selected - Five</h2>
-                        <ol id="player">
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                        </ol>
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name2" class="text-2xl font-semibold">Liton Das.</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 57</p>
+                        <span>.</span>
+                        <p>Run 1576</p>
                     </div>
-                    <div>
-                        <h2 class="text-center">Budget</h2>
-                        <form class="flex mt-3">
-                            <label for="#">Per Player:</label>
-                            <input id="per-player-expensive-js" class="w-2/4" type="number">
-                        </form>
-                        <button class="bg-blue-500 w-full mt-3" id="calculate-player-expensive-js">Calculate</button>
-
-                        <div class="flex mt-3">
-                            <div>
-                                <h5>Player Expenses:</h5>
-                            </div>
-                            <div class="ml-4">
-                                <h5>$<span id="total-player-expensive-js">00</span></h5>
-                            </div>
-                        </div>
-                        <form class="flex mt-3 ">
-                            <label for="#">Manager:</label>
-                            <input id="manager-expensive-js" class="w-4/6 ml-7" type="number">
-                        </form>
-                        <form class="flex mt-3">
-                            <label for="#">Coach:</label>
-                            <input id="coach-expensive-js" class="w-3/6 ml-10" type="number">
-                        </form>
-                        <button class="bg-blue-500 w-full mt-3" id="calculate-total-js">Calculate Total</button>
-
-                        <div class="flex mt-5">
-                            <h5>Total:</h5>
-                            <h5 class="ml-20"><span id="total-expensive-js" class="text-red-600">$00</span></h5>
-                        </div>
-                        <div>
-
-                        </div>
-
-                    </div>
+                    <!-- player-2-btn -->
+                    <button onclick="addCart('name2', this)" type="button"
+                        class="rounded uppercase py-2 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
                 </div>
-                <!-- Section JS Field End-->
+            </div>
+            <!-- player-3 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/Anamul Haq.jfif" alt="">
+                </div>
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name3" class="text-2xl font-semibold">Anamul Haq</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 41</p>
+                        <span>.</span>
+                        <p>Run 1280</p>
+                    </div>
+                    <!-- player-3-btn -->
+                    <button onclick="addCart('name3', this)" type="button"
+                        class="rounded uppercase py-2 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
+                </div>
+            </div>
+            <!-- player-4 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/shakib Al Hasan.jpg" alt="">
+                </div>
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name4" class="text-2xl font-semibold">shakib Al Hasan</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 221</p>
+                        <span>.</span>
+                        <p>Run 6755</p>
+                    </div>
+                    <!-- player-4-btn -->
+                    <button onclick="addCart('name4', this)" type="button"
+                        class="rounded uppercase py-2 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
+                </div>
+            </div>
+            <!-- player-5 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/Mushfiqur Rahim.jpg" alt="">
+                </div>
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name5" class="text-2xl font-semibold">Mushfiqur Rahim</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 236</p>
+                        <span>.</span>
+                        <p>Run 6774</p>
+                    </div>
+                    <!-- player-5-btn -->
+                    <button onclick="addCart('name5', this)" type="button"
+                        class="rounded uppercase py-2 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
+                </div>
+            </div>
+            <!-- player-6 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/Mahmudullah.jpg" alt="">
+                </div>
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name6" class="text-2xl font-semibold">Renato Sanches</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 212</p>
+                        <span>.</span>
+                        <p>Run 4768</p>
+                    </div>
+                    <!-- player-6-btn -->
+                    <button onclick="addCart('name6', this)" type="button"
+                        class="rounded uppercase py-2 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
+                </div>
+            </div>
+            <!-- player-7 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/Mosaddek Hossain.jfif" alt="">
+                </div>
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name7" class="text-2xl font-semibold">Mosaddek Hossain</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 43</p>
+                        <span>.</span>
+                        <p>Run 634</p>
+                    </div>
+                    <!-- player-7-btn -->
+                    <button onclick="addCart('name7', this)" type="button"
+                        class="rounded uppercase py-2 mb-7 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
+                </div>
+            </div>
+            <!-- player-8 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/Mahadi Hasan Miraj.jfif" alt="">
+                </div>
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name8" class="text-2xl font-semibold">Mahadi Hasan Miraj</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 64</p>
+                        <span>.</span>
+                        <p>Run 612</p>
+                    </div>
+                    <!-- player-8-btn -->
+                    <button onclick="addCart('name8', this)" type="button"
+                        class="rounded uppercase py-2 mb-7 mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
+                </div>
+            </div>
+            <!-- player-9 -->
+            <div class="bg-black border-2 border-zinc-700 shadow-lg rounded">
+                <div class="h-2/4">
+                    <img class="w-full h-full hover:animate-pulse" src="images/Saifuddin.jfif" alt="">
+                </div>
+
+                <div class="h-2/4 text-center flex flex-col justify-center gap-6 py-4">
+                    <h2 id="name9" class="text-2xl font-semibold">Saifuddin</h2>
+                    <div class="flex items-center gap-3 justify-center text-zinc-400">
+                        <p>Match 29</p>
+                        <span>.</span>
+                        <p>Run 362</p>
+                    </div>
+                    <!-- player-9-btn -->
+                    <button onclick="addCart('name9', this)" type="button"
+                        class="rounded uppercase py-2  mx-10 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:mx-5 hover:ease-in-out duration-700 hover:disabled:bg-red-700">Select</button>
+                </div>
             </div>
         </section>
-        <!-- Card Section End -->
+
+        <!-- aside -->
+        <aside class="lg:w-1/4 w-fit md:w-auto mx-auto lg:mx-0">
+            <!-- 1st-aside -->
+            <div class="bg-black py-6 lg:mb-7 my-7 lg:my-0 rounded h-96">
+                <!-- no height (h) is better -->
+
+                <div class="text-center py-3">
+                    <h2 class="text-2xl font-semibold">Selected - <span id="count">V</span></h2>
+                    <img class="mx-auto animate-pulse" src="images/Ureg-Ureg Marker.png" alt="">
+                </div>
+
+                <!-- order-list -->
+                <div>
+                    <!-- ol -->
+                    <ol id="ol" class="list-decimal lg:ml-14 md:ml-48 ml-14 cus_head">
+                    </ol>
+                </div>
+            </div>
+            <!-- 2nd-aside -->
+            <div class="bg-black py-6 rounded">
+
+                <div class="text-center py-3">
+                    <h2 class="text-2xl font-semibold">Budget</h2>
+                    <img class="mx-auto animate-pulse" src="images/Ureg-Ureg Marker.png" alt="">
+                </div>
+
+                <!-- calculations -->
+                <div class="p-4">
+
+                    <!-- per-player -->
+                    <div class="flex justify-between items-center">
+                        <p class="text-zinc-400 pr-10 lg:pr-0">Per Player: </p>
+                        <input id="per-player" class="w-36 p-2 rounded bg-black border-2 outline-0" type="number"
+                            name="" value="" placeholder="Player Amount">
+                    </div>
+
+                    <!-- cal-btn -->
+                    <button onclick="calculate()"
+                        class="my-5 mx-auto block uppercase py-2 px-9 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:px-16 hover:ease-in-out duration-700 rounded"
+                        type="
+                        button">Calculate</button>
+
+                    <!-- player-expenses -->
+                    <div class="mb-4 flex justify-between items-center">
+                        <p class="text-zinc-400">Player Expenses = </p>
+                        <p class="text-white cus_head text-xl">$<span id="player-expenses"
+                                class="cus_head text-xl">Amount</span></p>
+                    </div>
+
+                    <!-- manager -->
+                    <div class="mb-4 flex justify-between items-center">
+                        <p class="text-zinc-400 pr-10 lg:pr-0">Manager: </p>
+                        <input class="w-36 p-2 rounded bg-black border-2 outline-0" type="number" name="" value=""
+                            id="manager" placeholder="ManagerAmount">
+                    </div>
+
+                    <!-- coach -->
+                    <div class="flex justify-between items-center">
+                        <p class="text-zinc-400 pr-10 lg:pr-0">Coach: </p>
+                        <input class="w-36 p-2 rounded bg-black border-2 outline-0" type="number" name="" value=""
+                            id="coach" placeholder="Coach Amount">
+                    </div>
+
+                    <!-- cal-total-btn -->
+                    <button id="calculate-total"
+                        class="my-5 mx-auto block uppercase py-2 px-9 bg-blue-700 hover:bg-green-700 disabled:bg-gray-600 font-medium hover:px-14 hover:ease-in-out duration-700 rounded"
+                        type="
+                            button">Calculate Total</button>
+
+                    <!-- total -->
+                    <div class="flex justify-between items-center">
+                        <p class="text-zinc-400">Total = </p>
+                        <p class="text-orange-500 cus_head text-xl">$<span id="total"
+                                class="cus_head text-xl">Amount</span></p>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </main>
 
+    <!-- footer -->
+    <footer>
+        <hr class="border-zinc-700">
+        </hr>
+        <small class="p-8 text-center block">Copyright @ 2022 All Rights Reserved.</small>
+    </footer>
+
+    <!-- js-files-script -->
     <script src="js/player.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/utiliteis.js"></script>
 </body>
 
 </html>

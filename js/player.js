@@ -1,51 +1,204 @@
-const playerNameList = [];
+// get or catch orderList ..
+const orderList = document.getElementById("ol");
 
-//  showPlayer Function
-function showPlayer() {
-    const showPlayName = document.getElementById('selection');
-    showPlayName.innerText = '';
-    for (let i = 0; i < playerNameList.length; i++) {
-        const tr = document.createElement("li");
-        li.innerHTML = `<ol>${i + 1}.</ol>
-        <ol>${playerNameList[i]}</ol>`;
-        if (i < 5) {
-            showPlayName.appendChild(li);
-        }
-        else {
-            alert("Sorry!! You can not add more than 5 players");
-            break;
-        }
+// click = add to cart
+function addCart(name, this_btn) {
 
+    const playerName = getIDInnerText(name);
+
+    // alter-btn-disable
+    // const if_id_for_disable = document.getElementById(this_btn);
+
+    // const length = orderList.childElementCount; // 0 theke start hoy
+    const length = orderList.children.length; // 0 theke start hoy
+    // const length = orderList.childNodes.length; // 1 theke start hoy
+
+    if (length < 5) {
+        const li = document.createElement('li');
+        li.innerText = playerName;
+        orderList.appendChild(li);
+        this_btn.disabled = true;
+        li.classList.add('px-5', "py-2", "text-2xl", "font-semibold", "text-orange-500", "animate-pulse");
+        // this_btn.setAttribute('disabled', true);
+
+        // alter-btn-disable
+        // if_id_for_disable.disabled = true;
+        // if_id_for_disable.setAttribute('disabled', true);
+
+        setTextValue("count", length + 1);
+    }
+    else {
+        alert("You Can't !!! Add More than 5 Players");
     }
 }
 
 
-// player selection
+// click = calculate-button
 
-function selectPlayer(selected) {
-    const playerName = selected.parentNode.children[0].innerText;
-    if (playerNameList.length < 5) {
-        playerNameList.push(playerName);
-        selected.disabled = true;
+function calculate() {
+
+    const length = orderList.children.length;
+
+    const perPlayer = getIDValue('per-player');
+    const perPlayerValue = makeFloat(perPlayer);
+
+    if (isNaN(perPlayerValue)) {
+        alert("Enter Amount for Per-Player");
+
+        setTextValue("player-expenses", "Amount");
+
+        setInputValue("per-player", '');
+        // document.getElementById('per-player').value = '';
+
+        setTextValue("total", "Amount");
+
+        // setInputValue("manager", '');
+        // setInputValue("coach", '');
     }
+
+    else if (perPlayerValue == 0) {
+        alert(`Player-Cost => (${perPlayerValue}) Amount can't be Zero`);
+
+        setTextValue("player-expenses", 'Amount');
+
+        setInputValue("per-player", '');
+
+        setTextValue("total", "Amount");
+
+        // setInputValue("manager", '');
+        // setInputValue("coach", '');
+    }
+
+    else if (perPlayerValue < 0) {
+        alert(`Player-Cost => (${perPlayerValue}) Amount can't be Negative`);
+
+        setTextValue("player-expenses", 'Amount');
+
+        setInputValue("per-player", '');
+
+        setTextValue("total", "Amount");
+
+        // setInputValue("manager", '');
+        // setInputValue("coach", '');
+    }
+
+    else if (length == 0) {
+        alert("Please Select some Players");
+
+        setTextValue("player-expenses", 'Amount');
+
+        setInputValue("per-player", '');
+
+        setTextValue("total", "Amount");
+
+        // setInputValue("manager", '');
+        // setInputValue("coach", '');
+    }
+
     else {
-        alert("sorry!! You can not add more than 5 players");
+        const expenses = length * perPlayerValue;
+
+        setTextValue("player-expenses", expenses);
+
+        // setInputValue("per-player", '');
+
+        setTextValue("total", "Amount");
+
+        // setInputValue("manager", '');
+        // setInputValue("coach", '');
     }
-    showPlayer();
 }
-// +++++++++Player Name show Part++++++++++ //
-document.getElementById('player-cost-btn').addEventListener('click', function () {
-    const totalPlayer = playerNameList.length;
-    let everyPlayer = getInputValueById('player');
-    if (playerNameList.length < 6 && (isNaN(everyPlayer) === false)) {
-        const totalExpense = everyPlayer * totalPlayer;
-        document.getElementById('expenses').innerText = totalExpense;
+
+
+// click = calculate-total-button
+
+const calculateTotal = document.getElementById("calculate-total").addEventListener('click', function () {
+
+
+    const playerExpenses = getIDInnerText('player-expenses');
+    const playerExpensesValue = makeFloat(playerExpenses);
+
+    const manager = getIDValue('manager');
+    const managerValue = makeFloat(manager);
+
+    const coach = getIDValue('coach');
+    const coachValue = makeFloat(coach);
+
+    if (isNaN(managerValue) || isNaN(coachValue)) {
+        alert("Enter Amount for Manager & Coach");
+
+        setTextValue("total", "Amount");
+
+        setInputValue("per-player", '');
+
+        // setInputValue("manager", '');
+        // setInputValue("coach", '');
     }
-    else if (everyPlayer < 1) {
-        alert('please select player before');
+
+    else if (managerValue == 0) {
+        alert(`Manager-Cost => (${managerValue}) Amount can't be Zero`);
+
+        setTextValue("total", "Amount");
+
+        setInputValue("per-player", '');
+
+        setInputValue("manager", '');
+        // setInputValue("coach", '');
     }
+
+    else if (coachValue == 0) {
+        alert(`Coach-Cost => (${coachValue}) Amount can't be Zero`);
+
+        setTextValue("total", "Amount");
+
+        setInputValue("per-player", '');
+
+        // setInputValue("manager", '');
+        setInputValue("coach", '');
+    }
+
+    else if (managerValue < 0) {
+        alert(`Manager-Cost => (${managerValue}) Amount can't be Negative`);
+
+        setTextValue("total", "Amount");
+
+        setInputValue("per-player", '');
+
+        setInputValue("manager", '');
+        // setInputValue("coach", '');
+    }
+
+    else if (coachValue < 0) {
+        alert(`Coach-Cost => (${coachValue}) Amount can't be Negative`);
+
+        setTextValue("total", "Amount");
+
+        setInputValue("per-player", '');
+
+        // setInputValue("manager", '');
+        setInputValue("coach", '');
+    }
+
+    // careful.. here, must be => playerExpenses not this => playerExpensesValue
+    else if (playerExpenses == "Amount") {
+        alert("Please Calculate Player Expenses, by Selecting Some Players & Press 'Calculate' Button");
+
+        setTextValue("total", "Amount");
+
+        setInputValue("per-player", '');
+
+        // setInputValue("manager", '');
+        // setInputValue("coach", '');
+    }
+
     else {
-        alert('please select player before');
+        const finalTotal = playerExpensesValue + managerValue + coachValue;
+        setTextValue("total", finalTotal);
+
+        setInputValue("per-player", '');
+
+        // setInputValue("manager","coach" '');
+
     }
 
 })
